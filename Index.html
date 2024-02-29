@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            font-family: 'Poppins' !important;
+            font-weight: 400;
+            color: #010101 !important;
+            font-size: 15px;
+            line-height: 26px;
+            overflow-x: hidden;
+            padding-bottom: 0;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 !important;
+        }
+
+        .text-18 {
+            font-size: 18px;
+        }
+
+        .text-22 {
+            font-size: 22px;
+        }
+
+        .font-600 {
+            font-weight: 600;
+        }
+
+        .font-500 {
+            font-weight: 500;
+        }
+
+        .gap-16 {
+            gap: 16px;
+        }
+
+        .font-400 {
+            font-weight: 400;
+        }
+
+        .img-theme {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            z-index: 1;
+            border: 10px solid #fff;
+            object-fit: cover;
+        }
+
+        .social-icon {
+            filter: invert(-20%) sepia(0%) saturate(7494%) hue-rotate(185deg) brightness(98%) contrast(96%);
+        }
+
+        .icon-img-theme {
+            filter: invert(94%) sepia(14%) saturate(3710%) hue-rotate(323deg) brightness(110%) contrast(107%);
+        }
+
+        .singal-heading {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .heading-box {
+            width: 100% !important;
+            font-weight: 700;
+            font-size: 20px;
+            color: #000 !important;
+            letter-spacing: 1px;
+            width: max-content;
+            border-bottom: 2px solid #F4D644;
+            position: relative;
+        }
+
+        .part-left .heading-box {
+            color: #fff !important;
+            background-color: transparent;
+            margin-bottom: 0px !important;
+        }
+
+        .part-left {
+            width: 25%;
+            background-color: #2A2E36;
+            height: auto;
+            padding: 30px;
+        }
+
+        .part-right {
+            width: 75%;
+        }
+
+        .right-top::before {
+            content: "";
+            height: 250px;
+            width: 88px;
+            top: 0px;
+            left: -88px;
+            position: absolute;
+            background-color: #F4D644;
+        }
+
+        .right-top {
+            position: relative;
+            margin-top: 50px;
+            background-color: #F4D644;
+            height: 250px;
+            width: 100%;
+        }
+
+        .signature-box {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .right-txt {
+            display: none;
+        }
+
+        .txt-line h1 {
+            font-size: 80px;
+            position: relative;
+            z-index: 1;
+            color: #292D2D;
+        }
+
+        .img-box {
+            width: 36px;
+            height: 36px;
+            border-radius: 6px;
+            background-color: #F4D644;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .after-line {
+            position: relative;
+        }
+
+        .after-line::after {
+            content: "";
+            width: 2px;
+            top: 0;
+            left: -24px;
+            background-color: #737373;
+            position: absolute;
+            height: 100%;
+        }
+
+        .mark-circle::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border: 2px solid #737373;
+            position: absolute;
+            left: -29px;
+            border-radius: 10px;
+            background: #fff;
+            z-index: 1;
+        }
+
+        @media(max-width:824px) {
+            .resume-main {
+                display: block !important;
+            }
+
+            .part-left {
+                width: 100% !important;
+                margin-left: 0px !important;
+                margin: 0px 20px;
+            }
+
+            .part-right {
+                width: 100% !important;
+            }
+
+            .right-top {
+                display: none !important;
+            }
+
+            .right-txt {
+                display: block;
+            }
+
+            .txt-line h1 {
+                color: #F4D644;
+            }
+        }
+
+        @media(max-width:992px) {
+            .part-left {
+                width: 100%;
+            }
+
+            .part-right {
+                width: 100%;
+            }
+
+            .after-line::after {
+                left: -14px;
+            }
+
+            .mark-circle::before {
+                left: -19px;
+            }
+        }
+
+        @media(max-width:1299px) {
+            .part-left {
+                width: 50%;
+            }
+
+            .part-right {
+                width: 50%;
+            }
+
+            .txt-line h1 {
+                font-size: 40px;
+            }
+
+            .right-top::before {
+                content: "";
+                height: 250px;
+                width: 183px;
+                top: 0px;
+                left: -170px;
+                position: absolute;
+                background-color: #F4D644;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="resume-main d-flex">
+        <div class="part-left">
+            <div class="d-flex justify-content-center">
+                <img src="./assets/Image/processed-b4991952-a3f6-4e27-a846-ddc9c5229186_AsxOg9jF.jpeg" class="img-theme"
+                    alt="">
+            </div>
+            <div class="right-txt pt-5">
+                <div class="txt-line px-md-5 gap-16">
+                    <div class="text-main text-center">
+                        <h1 id="fname" class="font-600 pt-2">UJAS</h1>
+                        <h1 id="lname" class="font-600">SUTARIYA</h1>
+                    </div>
+                    <div>
+                        <p class="text-22 text-center text-white py-3">FRONT END DEVLOPER</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="gap-16 mt-4 justify-content-center d-flex">
+                    <a href="https://www.linkedin.com/in/ujas-sutatiya-8ba906214?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank"><img src="./assets/Image/linkedin.png" class="icon-img-theme" width="30px"
+                            alt=""></a>
+                    <a href="https://www.facebook.com/ujas.sutariya.92?mibextid=ZbWKwL" target="_blank"><img
+                            src="./assets/Image/facebook.png" class="icon-img-theme" width="30px" alt=""></a>
+                    <a href="https://www.instagram.com/ujas___15?igsh=NnprczI5ODdoZmk2" target="_blank"><img
+                            src="./assets/Image/instagram.png" class="icon-img-theme" width="30px" alt=""></a>
+
+                </div>
+            </div>
+            <div class="summary pt-5 d-flex justify-content-center">
+
+            </div>
+            <div class="pt-3">
+                <h3 class="heading-box d-flex py-2 text-14">PERSONAL INFORMATION</h3>
+                <div>
+                    <div class="pt-3">
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/email.png" class="social-icon" width="20px"
+                                    height="20px" alt=""></div><span
+                                class="font-600 text-white">sutariyaujas99@gmail.com</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/phone-call.png" class="social-icon"
+                                    width="20px" height="20px" alt=""></div><span
+                                class="font-600 text-white">+919328128776</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/address.png" class="social-icon" width="20px"
+                                    height="20px" alt=""></div><span class="font-600 text-white">Yogi chock, Nana
+                                Varachha Surat</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/calendar.png" class="social-icon" width="20px"
+                                    height="20px" alt=""></div><span class="font-600 text-white">15 january, 2003</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/profile-user.png" class="social-icon"
+                                    width="20px" height="20px" alt=""></div><span
+                                class="font-600 text-white">Unmaride</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-16 py-2">
+                            <div class="img-box"><img src="./assets/Image/flag.png" class="social-icon" width="24px"
+                                    height="24px" alt=""></div><span class="font-600 text-white">India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-3">
+                <h3 class="heading-box d-flex py-2 text-14">EDUCATION</h3>
+                <div>
+                    <div class="pt-3 text-white">
+                        <div>
+                            <h6 class="font-600 pb-2">Ashadeep School</h6>
+                        </div>
+                        <p class="font-500">Gujarat Secondary Education Board</p>
+                        <p class="font-500">2017 – 2018</p>
+                    </div>
+                    <div class="pt-3 text-white">
+                        <div>
+                            <h6 class="font-600 pb-2">Ashadeep School</h6>
+                        </div>
+                        <p class="font-500">Gujarat Higher Secondary Education Board</p>
+                        <p class="font-500">2020 – 2021</p>
+                    </div>
+                    <div class="pt-4 text-white">
+                        <div>
+                            <h6 class="font-600 pb-2">Bachelor of Computer Applications</h6>
+                        </div>
+                        <p class="font-500">Sarvepalli Radhakrishnan University, Bhopal</p>
+                        <p class="font-500">2021 – 2023</p>
+                    </div>
+                    <div class="pt-4 text-white">
+                        <div>
+                            <h6 class="font-600 pb-2">Master In Web Design</h6>
+                        </div>
+                        <p class="font-500">creative design & multimedia institute</p>
+                        <p class="font-500">2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-3">
+                <h3 class="heading-box d-flex py-2 text-14">SKILLS</h3>
+                <div>
+                    <div class="pt-3">
+                        <ul class="p-0 text-white" style="margin-left: 18px; line-height: 36px;">
+                            <li class="font-500">Photoshop , Illustator , Figma</li>
+                            <li class="font-500">Html , Html-5</li>
+                            <li class="font-500">Css , Css-3</li>
+                            <li class="font-500">HTML frameworks : Bootstrap , Angular , React.js , Next.js , vue.js
+                            </li>
+                            <li class="font-500">CSS frameworks : Bootstrap , Tailwind CSS , Ant Design , SASS/SCSS ,
+                                Vanilla , </li>
+                            <li class="font-500">JavaScript</li>
+                            <li class="font-500">Jquary ( Basic)</li>
+                            <li class="font-500">styled components</li>
+                            <li class="font-500">Responsive Web Design</li>
+                            <li class="font-500">Git/GitHub</li>
+                            <li class="font-500">Material-UI</li>
+                            <li class="font-500">RESTful APIs, AJAX</li>
+                            <li class="font-500">Cross-browser Compatibility</li>
+                            <li class="font-500">Wordpress (Basic)</li>
+                            <li class="font-500">Teamwork</li>
+                            <li class="font-500">Problem solving</li>
+                            <li class="font-500">Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="part-right">
+            <div class="right-top d-flex align-items-center">
+                <div class="top-circle"></div>
+                <div class="txt-line px-4 gap-16">
+                    <div class="d-flex gap-16">
+                        <h1 id="fname" class="font-600">UJAS</h1>
+                        <h1 id="lname" class="font-600">SUTARIYA</h1>
+                    </div>
+                    <div>
+                        <p class="text-22 pt-3 font-600 position-relative">FRONT END DEVLOPER</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5 px-4 pt-0 px-lg-5 pb-3">
+                <div>
+                    <h3 class="heading-box d-flex py-2 text-14">ABOUT ME</h3>
+                    <p class="font-500 pt-2 pb-4">Hello, Greetings! I am a professional Front-end developer and react js
+                        developer
+                        with more than 2 years of experience. I
+                        have strong knowledge of web designing html, css and javascript. In addition, I also have good
+                        experience
+                        with
+                        responsiove designing's softwares such as a React and Skills: - Html, Css, JavaScript,
+                        Bootstrap, JQuery,
+                        React Js,
+                        Tailwind Css, Material UI, Ant-Design and React Hooks etc. If you give me a chanceto help you, I
+                        can give
+                        you agood
+                        results in the time you want. Let's discuss more details via chat .I will look forward to
+                        hearing from you.
+                        Highly motivated and professional Executive Secretary with over 7 years of
+                        experience
+                        providing high-level
+                        support to
+                        senior executives. Proficient in managing calendars, organizing meetings and events, handling
+                        confidential
+                        documents,
+                        and communicating with internal and external stakeholders. Possess exceptional communication and
+                        interpersonal
+                        skills
+                        with a proven ability to work independently and as</p>
+                </div>
+                <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                    PROFESSIONAL
+                    EXPERIENCE</h3>
+                <div>
+                    <div class="after-line">
+                        <div class="pt-4 mark-circle">
+                            <div>
+                                <h6 class="font-600 pb-2 text-14 singal-heading">WEB DESIGNER</h6>
+                                <p class="font-500">Globalia Soft LLP | 2022 - 2023</p>
+                            </div>
+                            <div>
+                                <ul class="pt-2 p-0" style="margin-left: 20px;">
+                                    <li class="font-500">I worked on Html and CSS projects. Psd to Html & Figma to Html.
+                                    </li>
+                                    <li class="font-500">I worked on live projects in react , Angular And Next js Html
+                                        and Css And
+                                        JavaScript.</li>
+                                    <li class="font-500">I worked on Photoshop , Illustator , Figma</li>
+                                    <li class="font-500">Collaborated with designers and backend developers to implement
+                                        user-friendly
+                                        interfaces and ensure seamless integration
+                                        of front-end and back-end components.</li>
+                                    <li class="font-500">Conducted code reviews and implemented best practices to
+                                        optimize code quality
+                                        and maintainability.</li>
+                                    <li class="font-500">Assisted in the development of client websites using HTML, CSS,
+                                        and JavaScript.
+                                    </li>
+                                    <li class="font-500">Implemented responsive designs to enhance user experience
+                                        across desktop and
+                                        mobile devices.</li>
+                                    <li class="font-500">Participated in team meetings to discuss project requirements
+                                        and propose
+                                        innovative solutions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pt-1 mark-circle">
+                            <div>
+                                <h6 class="font-600 pb-2 text-18 singal-heading">FRONT END DEVLOPER</h6>
+                                <p class="font-500">Oceanmtech | 2023 - 2024</p>
+                            </div>
+                            <div>
+                                <ul class="pt-2 p-0" style="margin-left: 20px;">
+                                    <li class="font-500">I worked on Html and CSS projects. Psd to Html & Figma to Html.
+                                    </li>
+                                    <li class="font-500">I worked on live projects in react , Angular And Next js Html
+                                        and Css And
+                                        JavaScript.</li>
+                                    <li class="font-500">design sample page layouts including font, text size and
+                                        colours</li>
+                                    <li class="font-500">edit content, debug code and re-design web pages</li>
+                                    <li class="font-500">research current design trends.</li>
+                                    <li class="font-500">consider search engine optimisation (SEO)</li>
+                                    <li class="font-500">design the website's visual imagery and ensure it's in line
+                                        with company branding
+                                        policy or the requirements of the
+                                        client</li>
+                                    <li>present initial design ideas to clients</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                            PROJECT</h3>
+                        <div class="pt-3" style="line-height: 36px;">
+                            <p class="font-500">Camino UI : <span class="font-600"><a
+                                        href="https://camino-ui.vercel.app"
+                                        target="_blank">https://camino-ui.vercel.app</a></span></p>
+                            <p class="font-500">Graph-UI : <span class="font-600"><a
+                                        href="https://graph-ui-theme.vercel.app/signin"
+                                        target="_blank">https://graph-ui-theme.vercel.app/signin
+                                    </a></span></p>
+                            <p class="font-500">Quiz-UI : <span class="font-600"><a
+                                        href="https://quiz-jet-eight.vercel.app/"
+                                        target="_blank">https://quiz-jet-eight.vercel.app/</a></span></p>
+                            <p class="font-500">Cartoon Web : <span class="font-600"><a
+                                        href="https://cratoon-ui.vercel.app/"
+                                        target="_blank">https://cratoon-ui.vercel.app/</a></span></p>
+                            <p class="font-500">eatos Web : <span class="font-600"><a href="https://www.eatos.com/"
+                                        target="_blank">https://www.eatos.com/</a></span></p>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                            LANGUAGE</h3>
+                        <div class="pt-3">
+                            <p class="font-500">Gujarati</p>
+                            <p class="font-500">Hindi</p>
+                            <p class="font-500">English</p>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                            OBJECTIVE</h3>
+                        <div class="pt-3">
+                            <p class="font-500">"Self-motivated team player with nine years of experience seeking a
+                                position as a lead
+                                web developer with Next
+                                Generation Web Development where I can apply my advanced knowledge of web design with my
+                                leadership
+                                abilities to meet
+                                client needs and exceed their expectations".
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <h3 class="heading-box d-flex py-2 text-14">CERTIFICATIONS</h3>
+                        <div>
+                            <div class="pt-3">
+                                <ul class="p-0" style="margin-left: 18px;">
+                                    <li class="font-500">Bachelor of Computer Applications</li>
+                                    <li class="font-500">Master In Web Design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <h3 class="heading-box d-flex py-2 text-14 m-0">AWARDS</h3>
+                        <P class="pt-1 font-500">Sarvepalli Radhakrishnan University, Bhopal</P>
+                        <P class="pt-1 font-500">creative design & multimedia institute</P>
+                    </div>
+                    <div class="py-2 text-white">
+                        <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                            ACTIVITIES</h3>
+                        <P class="pt-1 font-500 text-dark">programming</P>
+                        <P class="pt-2 font-500 text-dark">Cricket</P>
+                    </div>
+                    <div class="py-2 text-white">
+                        <h3 class="heading-box d-flex py-2 text-14 text-white d-flex align-items-center gap-16 py-2">
+                            REFERENCES</h3>
+                        <P class="pt-1 font-500 text-dark">Available upon request.</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
